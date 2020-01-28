@@ -1,70 +1,82 @@
 <html>
-    <head>
-        <style>
-            header{
-                border-bottom:1px solid gray;
-            }
-            #container {
-                display:grid;
-                grid-template-columns: 150px 1fr;
-            }
-            #container nav {
-                border-right:1px solid gray;
-            }
-            #container article {
-                padding-left:1rem;
-            }
-            #light_mode {
-                position: absolute;
-                right:20px;
-                top:40px;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>WEB</h1>
-            <script>
-                var DayNight = {
-                    self:null,
-                    toggle:function(){
-                        var label, bgColor, color;
-                        if(self.value === 'day'){
-                            label = 'night';
-                            bgColor = 'white';
-                            color = 'black';
-                        }  else {
-                            label = 'day';
-                            bgColor = 'black';
-                            color = 'white';
-                        }
-                        document.querySelector('body').style.backgroundColor = bgColor;
-                        document.querySelector('body').style.color = color;
-                        self.value = label;
-                        var lis = document.querySelectorAll('li>a');
-                        for(var i=0; i<lis.length; i++){
-                            lis[i].style.color = color;
-                        }
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <style>
+        header {
+            border-bottom: 1px solid gray;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+        }
+
+        #container nav {
+            border-right: 1px solid gray;
+        }
+
+        #container article {
+            padding-left: 1rem;
+        }
+
+        #light_mode{
+            margin-top:1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>WEB</h1>
+        <script>
+            var DayNight = {
+                self: null,
+                turn: 1,
+                toggle: function () {
+                    var label, bgColor, color;
+                    if (self.value === 'day') {
+                        label = 'night';
+                        bgColor = '#FFF';
+                        color = '#000';
+                    } else {
+                        label = 'day';
+                        bgColor = '#000';
+                        color = '#FFF';
+                    }
+                    anime({
+                        targets: 'body',
+                        backgroundColor: bgColor,
+                        color: color,
+                        duration: 1000
+                    });
+                    self.value = label;
+                    var lis = document.querySelectorAll('li>a');
+                    for (var i = 0; i < lis.length; i++) {
+                        lis[i].style.color = color;
                     }
                 }
-            </script>
+            }
+        </script>
+
+    </header>
+    <div id="container">
+        <nav>
+            <ol>
+                <li><a href="1.html">HTML</a></li>
+                <li><a href="2.html">CSS</a></li>
+                <li><a href="3.html">JavaScript</a></li>
+            </ol>
+        </nav>
+        <article>
             <input type="button" id="light_mode" value="night" onclick="
                 DayNight.self = this;
                 DayNight.toggle();
             ">
-        </header>   
-        <div id="container">
-            <nav>
-                <ol>
-                    <li><a href="1.html">HTML</a></li>
-                    <li><a href="2.html">CSS</a></li>
-                    <li><a href="3.html">JavaScript</a></li>
-                </ol>
-            </nav>
-            <article>
-                <h2>WEB</h2>
-                Hello world
-            </article>
-        </div>
-    </body>
+            <h2>WEB</h2>
+            Hello world
+        </article>
+    </div>
+</body>
+
 </html>
