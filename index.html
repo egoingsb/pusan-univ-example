@@ -1,9 +1,6 @@
 <html>
     <head>
         <style>
-            li {
-                color:blue;
-            }
             header{
                 border-bottom:1px solid gray;
             }
@@ -17,11 +14,40 @@
             #container article {
                 padding-left:1rem;
             }
+            #light_mode {
+                position: absolute;
+                right:20px;
+                top:40px;
+            }
         </style>
     </head>
     <body>
         <header>
             <h1>WEB</h1>
+            <script>
+                function toggleDayNightMode(self){
+                    var label, bgColor, color;
+                    if(self.value === 'day'){
+                        label = 'night';
+                        bgColor = 'white';
+                        color = 'black';
+                    }  else {
+                        label = 'day';
+                        bgColor = 'black';
+                        color = 'white';
+                    }
+                    document.querySelector('body').style.backgroundColor = bgColor;
+                    document.querySelector('body').style.color = color;
+                    self.value = label;
+                    var lis = document.querySelectorAll('li>a');
+                    for(var i=0; i<lis.length; i++){
+                        lis[i].style.color = color;
+                    }
+                }
+            </script>
+            <input type="button" id="light_mode" value="night" onclick="
+                toggleDayNightMode(this);
+            ">
         </header>   
         <div id="container">
             <nav>
