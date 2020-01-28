@@ -1,21 +1,40 @@
 <html>
     <head>
-
+        <style>
+            li {
+                color:blue;
+            }
+            header{
+                border-bottom:1px solid gray;
+            }
+            #container {
+                display:grid;
+                grid-template-columns: 150px 1fr;
+            }
+            #container nav {
+                border-right:1px solid gray;
+            }
+            #container article {
+                padding-left:1rem;
+            }
+        </style>
     </head>
     <body>
         <header>
             <h1>WEB</h1>
         </header>   
-        <nav>
-            <ol>
-                <li><a href="1.html">HTML</a></li>
-                <li><a href="2.html">CSS</a></li>
-                <li><a href="3.html">JavaScript</a></li>
-            </ol>
-        </nav>
-        <article>
-            <h2>WEB</h2>
-            Hello world
-        </article>
+        <div id="container">
+            <nav>
+                <ol>
+                    <li><a href="1.html">HTML</a></li>
+                    <li><a href="2.html">CSS</a></li>
+                    <li><a href="3.html">JavaScript</a></li>
+                </ol>
+            </nav>
+            <article>
+                <h2>WEB</h2>
+                Hello world
+            </article>
+        </div>
     </body>
 </html>
