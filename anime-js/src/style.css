@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Monofett|Open+Sans+Condensed:300&display=swap');
+#stage>div{
+    margin:0;
+    margin-bottom:1rem;
+    font-size:5rem;
+    font-family: 'Monofett', cursive;
+    width:10px;
+}
