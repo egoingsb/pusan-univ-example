@@ -3,18 +3,41 @@
     <head>
         <title>WEB - Welcome</title>
         <meta charset="utf-8">
+        <style>
+            h1{
+                border-bottom:3px solid red;
+                padding:20px;
+            }
+            h1 a{
+                text-decoration: none;
+            }
+            ol {
+                border-right:30px solid cyan;
+                width:150px;
+            }
+            #article{
+                border:10px solid powderblue;
+            }
+            #container{
+                display:grid;
+                grid-template-columns: 200px 1fr;
+            }
+        </style>
     </head>
     <body>
         <h1><a href="index.html">WEB</a></h1>
         <!-- ordered list -->
-        <ol>
-            <li><a href="1.html">HTML</a></li>
-            <li><a href="2.html">CSS</a></li>
-            <li><a href="3.html">JavaScript</a></li>
-        </ol>
-        <h2>Welcome</h2>
-        Hello, <a href="http://w3c.org">Web</a>
-        <img  width="100" src="https://source.unsplash.com/640x360/?pusan">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Zuyu6K0T0VI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div id="container">
+            <ol>
+
+                <li><a href="1.html">HTML</a></li>
+                <li><a href="2.html">CSS</a></li>
+                <li><a href="3.html">JavaScript</a></li>
+            </ol>
+            <div id="article">
+                <h2>Welcome</h2>
+                Hello, <a href="http://w3c.org">Web</a>
+            </div>
+        </div>
     </body>
 </html>
