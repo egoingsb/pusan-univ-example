@@ -21,14 +21,23 @@
         <article>
             <h2>React</h2>
             <div>
-                <input type="button" value="day" onclick="
-                    document.querySelector('body').style.backgroundColor = 'white'; 
-                    document.querySelector('body').style.color = 'black';   
-                ">
-                <input type="button" value="night" onclick="
-                    document.querySelector('body').style.backgroundColor = 'black'; 
-                    document.querySelector('body').style.color = 'white';
-                ">
+<input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor = 'white'; 
+    document.querySelector('body').style.color = 'black';   
+">
+<input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor = 'black'; 
+    document.querySelector('body').style.color = 'white';
+">
+
+<input type="button" value="night" onclick="
+    //만약 이 버튼의 value가 night라면 
+        document.querySelector('body').style.backgroundColor = 'black'; 
+        document.querySelector('body').style.color = 'white';
+    // 아니라면
+        document.querySelector('body').style.backgroundColor = 'white'; 
+        document.querySelector('body').style.color = 'black';   
+">
             </div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi tempore odio <span>quis</span> magni sequi dolorem eius libero tempora facilis adipisci repellendus quidem placeat mollitia, quo alias unde sit ab distinctio.
         </article>

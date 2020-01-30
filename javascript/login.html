@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+    </head>
+    <body>
+        <input type="button" value="login" onclick="
+if(sha256(prompt('password?')) === '0ffe1abd1a08215353c233d6e009613e95eec4253832a761af28ff37ac5a150c'){
+    document.querySelector('h1').innerHTML = 'Hello!';
+} else {
+    document.querySelector('h1').innerHTML = 'Who are you?';
+}
+        ">
+        <h1>인증중.....</h1>
+    </body>
+</html>
