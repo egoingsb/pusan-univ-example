@@ -21,30 +21,39 @@
         <article>
             <h2>React</h2>
             <div>
-
+<script>
+    var DayNightManager = {
+        self,
+        toNight:function(){
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            var as = document.querySelectorAll('ol a');
+            var i=0;
+            while(i<as.length){
+                as[i].style.color='white';
+                i=i+1;
+            }
+            this.self.value = 'day';
+        },
+        toDay:function(){
+            document.querySelector('body').style.backgroundColor = 'white'; 
+            document.querySelector('body').style.color = 'black';  
+            var as = document.querySelectorAll('ol a');
+            var i=0;
+            while(i<as.length){
+                as[i].style.color='black';
+                i=i+1;
+            }
+            this.self.value = 'night';
+        }
+    }  
+</script>
 <input type="button" value="night" onclick="
+    DayNightManager.self = this;
     if(this.value === 'night'){
-        document.querySelector('body').style.backgroundColor = 'black'; 
-        document.querySelector('body').style.color = 'white';
-        
-
-        var as = document.querySelectorAll('ol a');
-        var i=0;
-        while(i<as.length){
-            as[i].style.color='white';
-            i=i+1;
-        }
-        this.value = 'day';
+        DayNightManager.toNight();
     } else {
-        document.querySelector('body').style.backgroundColor = 'white'; 
-        document.querySelector('body').style.color = 'black';  
-        var as = document.querySelectorAll('ol a');
-        var i=0;
-        while(i<as.length){
-            as[i].style.color='black';
-            i=i+1;
-        }
-        this.value = 'night';
+        DayNightManager.toDay();
     }
 ">
             </div>
