@@ -3,6 +3,7 @@
     <head>
         <title>WEB - React</title>
         <meta charset="utf-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     </head>
     <body>
         <header>
@@ -19,7 +20,17 @@
         </nav>
         <article>
             <h2>React</h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi tempore odio quis magni sequi dolorem eius libero tempora facilis adipisci repellendus quidem placeat mollitia, quo alias unde sit ab distinctio.
+            <div>
+                <input type="button" value="day" onclick="
+                    document.querySelector('body').style.backgroundColor = 'white'; 
+                    document.querySelector('body').style.color = 'black';   
+                ">
+                <input type="button" value="night" onclick="
+                    document.querySelector('body').style.backgroundColor = 'black'; 
+                    document.querySelector('body').style.color = 'white';
+                ">
+            </div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi tempore odio <span>quis</span> magni sequi dolorem eius libero tempora facilis adipisci repellendus quidem placeat mollitia, quo alias unde sit ab distinctio.
         </article>
     </body>
 </html>
