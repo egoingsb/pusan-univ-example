@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <div>
+            이름 : <input type="text" id="name" onchange="
+                var name = this.value;
+                var letter = '안녕하세요.'+name+'님. 잘 지내세요. '+name+'님';
+                document.querySelector('#output').value = letter;
+            ">
+        </div>
+        </div>
+        <div>
+            결과 : <textarea type="text" id="output"></textarea>
+        </div>
+    </body>
+</html>
